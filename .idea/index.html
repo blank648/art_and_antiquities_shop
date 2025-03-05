@@ -1,18 +1,86 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8"><!-- codificarea în memorie a caracterelor-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
-  <meta name="keywords" content="internet, tehnici web, HTML, taguri"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
-  <meta name="description" content="Curs de Tehnici Web. Limbajul HTML. Taguri."><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
-  <meta name="author" content="Irina Ciocan">  <!-- autorul/autoarea paginii-->
 
-  <link rel="icon" type="image/png" href="/C:\Users\user\Desktop\Tehnici Web\Resurse/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/C:\Users\user\Desktop\Tehnici Web\Resurse/favicon.svg" />
-  <link rel="shortcut icon" href="/C:\Users\user\Desktop\Tehnici Web\Resurse/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/C:\Users\user\Desktop\Tehnici Web\Resurse/apple-touch-icon.png" />
-  <link rel="manifest" href="/C:\Users\user\Desktop\Tehnici Web\Resurse/site.webmanifest" />
+  <meta charset="UTF-8">
+  <meta name="author" content="Diaconescu Adrian">
+  <meta name="keywords" content="vintage, mozaic, arta, design, antichitate">
+  <meta name="description" content="Website dedicat artei vintage si mozaicului, explorand frumusetea designului clasic.">
+  <title>The Vintage Mosaic - Artă si Design Vintage</title>
+
+  <style>
+    :root {
+      /* variabile pentru spatiere si stilizare */
+      --horizontal-padding: 60px;
+      --zone-padding: 20px;
+      --header-bg: #f2f2f2;
+      --footer-bg: #e2e2e2;
+      --grid-bg: #ffffff;
+      --border-color: #cccccc;
+      --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      --grid-gap-large: 40px;
+      --grid-gap-medium: 20px;
+      --grid-gap-small: 10px;
+      --grid-gap: var(--grid-gap-large);
+    }
+
+    body {
+      padding-left: var(--horizontal-padding);
+      padding-right: var(--horizontal-padding);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* stilizare header */
+    header {
+      background-color: var(--header-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+      padding: var(--zone-padding);
+      margin-bottom: 20px;
+    }
+
+    /* stilizare footer */
+    footer {
+      background-color: var(--footer-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+      padding: var(--zone-padding);
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* stilizare container grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: var(--grid-gap);
+      margin-bottom: 20px;
+    }
+
+    /* stilizare celule grid */
+    .grid-container > div {
+      background-color: var(--grid-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+      padding: var(--zone-padding);
+    }
+
+    /* imagini, iframes, videoclipuri */
+    img, iframe, video {
+      width: 100%;
+      max-width: 600px;
+      min-width: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+
 </head>
+
 <body>
 <header>
   <h2>The Vintage Mosaic</h2>
@@ -28,21 +96,18 @@
       </li>
       <li><a href = "#Contact">Contact</a>
       </li>
-      <li>
-        <a href = "#faq">faq</a>
+      <li><a href = "#faq">faq</a>
       </li>
-      <li>
-        <a href = "#oferte">oferte</a>
+      <li><a href = "#oferte">oferte</a>
       </li>
-      <li>
-        <a href = "#informatii">informatii</a>
+      <li><a href = "#informatii">informatii</a>
       </li>
     </ul>
     <div class="container-iframe">
       <div class="taburi-iframe">
-        <a href="https://www.youtube.com/embed/watch?v=BQ4UwzRLVpQ" target="ifr-video">Importanța artei</a>
+        <a href="https://www.youtube.com/embed/watch?v=SUQS5kK7GHk" target="ifr-video">Importanța artei</a>
       </div>
-      <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/watch?v=BQ4UwzRLVpQ"
+      <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/watch?v=SUQS5kK7GHk"
               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </nav>
@@ -66,7 +131,6 @@
   </section>
   <section id="Categorii">
     <h3>Categorii</h3>
-    <p>Mobilier de epoca</p>
 
     <section id="mobilier de epoca">
       <h3>Mobilier de epoca</h3>
@@ -75,7 +139,7 @@
 
     <section id="Arta Plastica">
       <h3>Arta plastica</h3>
-      <p>Arta valoroasa apartinand diferitelor <b>stiluri</b>.</p>
+      <p>Arta valoroasa aparținand diferitelor <b>stiluri</b>.</p>
     </section>
 
     <section id="Bijuterii vintage">
@@ -94,8 +158,8 @@
     </section>
 
     <section id="Portelanuri si ceramica">
-      <h3>Portelanuri și ceramică</h3>
-      <p>Portelanuri si ceramica provenind din <b>epoca Tudor</b> si <b>dinastia Quing</b> </p>
+      <h3>Porțelanuri și ceramică</h3>
+      <p>Porțelanuri si ceramica provenind din <b>epoca Tudor</b> si <b>dinastia Quing</b> </p>
     </section>
 
   </section>
@@ -134,12 +198,11 @@
       Sediul Companiei
     </a>
     <p>Link media Whatsapp: </p>
-    <a href="https://wa.me/40723049265" target="_blank">Deschide conversație WhatsApp</a>
-
+    <a href="https://wa.me/40723049265" target="_blank">Deschide conversatia WhatsApp</a>
   </section>
 
   <section id="faq">
-    <h2>Întrebări Frecvente</h2>
+    <h2>Intrebari Frecvente</h2>
     <details>
       <summary>Ce este The Vintage Mosaic?</summary>
       <p>The Vintage Mosaic este un magazin dedicat artei <b>vintage</b>, oferind piese de mobilier, bijuterii și obiecte decorative unice.</p>
@@ -157,25 +220,59 @@
   <section id="oferte">
     <h2>Oferte Speciale</h2>
     <details>
-      <summary>Reduceri de vară</summary>
-      <p>Beneficiați de reduceri de până la <b>40%</b> la selecția de articole <b>vintage</b> în perioada verii.</p>
+      <summary>Reduceri de vara</summary>
+      <p>Beneficiati de reduceri de pana la <b>40%</b> la selectia de articole <b>vintage</b> in timpul verii.</p>
     </details>
     <details>
-      <summary>Promoție de Crăciun</summary>
-      <p>Achiziționați cadouri unice cu prețuri speciale și surprize festive, valabile doar în <i>sezonul rece</i>.</p>
+      <summary>Promotie de Craciun</summary>
+      <p>Achizitionati cadouri unice cu preturi speciale si surprize festive, valabile doar în <i>sezonul rece</i>.</p>
     </details>
   </section>
 
   <section id="informatii">
-    <h2>Informații Suplimentare</h2>
+    <h2>Informatii Suplimentare</h2>
     <details>
-      <summary>Cum funcționează programul de fidelitate?</summary>
-      <p>Prin înscrierea în programul de fidelitate, beneficiați de puncte la fiecare achiziție, ce pot fi transformate în <b>reduceri</b>.</p>
+      <summary>Cum functionează programul de fidelitate?</summary>
+      <p>Prin inscrierea in programul de fidelitate, beneficiati de puncte la fiecare achiziție, ce pot fi transformate în <b>reduceri</b>.</p>
     </details>
     <details>
       <summary>Detalii despre livrare</summary>
-      <p>Livrarea este gratuită pentru comenzile ce depășesc o anumită valoare. Consultați secțiunea de <strong>atenționare</strong> pentru termeni și condiții.</p>
+      <p>Livrarea este gratuita pentru comenzile ce depasesc 2000 de lei. Consultati sectiunea de <strong>atentionare</strong> pentru termeni si conditii.</p>
     </details>
+  </section>
+
+  <p> </p>
+  <img src="car-boi.jpg" usemap="#image-map">
+  <map name="image-map">
+    <area target="" alt="" title="" href="" coords="" shape="rect">
+  </map>
+
+  <section id="produse">
+    <h2>Produse</h2>
+    <div class="grid-container">
+      <div>Produs 1</div>
+      <div>Produs 2</div>
+      <div>Produs 3</div>
+      <div>Produs 4</div>
+    </div>
+  </section>
+
+  <section id="facultate">
+    <h2>Facultatea de Matematica si Informatica</h2>
+    <p>
+      Adresa:
+      <a href="https://www.google.com/maps/place/Facultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83/@44.4344659,26.0976765,879m/data=!3m1!1e3!4m6!3m5!1s0x40b1ff472f47f047:0x493984726f0235f9!8m2!3d44.4355355!4d26.0995867!16s%2Fg%2F1td63tdh?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+        Facultatea de Matematica si Informatica
+      </a>
+    </p>
+    <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.895026424111!2d26.0976765!3d44.4355355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1679999999999"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+    </iframe>
   </section>
 
 </main>
@@ -184,8 +281,9 @@
   <a href = "#Categorii">Categorii</a>
   <a href = "#Parteneri">Parteneri</a>
   <a href = "#Contact">Contact</a>
+  <a href = "#Acasa" download>Download Index</a>
   <p> </p>
-  <small>&copy; <time datetime="2025-03-04">4 martie 2025</time> Toate drepturile rezervate.</small>
+  <small>&copy; <time datetime="2025-03-05">5 martie 2025</time> Toate drepturile rezervate.</small>
 </footer>
 </body>
 </html>
