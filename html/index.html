@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Diaconescu Adrian">
+    <meta name="keywords" content="vintage, mozaic, arta, design, antichitate">
+    <meta name="description" content="Website dedicat artei vintage si mozaicului, explorand frumusetea designului clasic.">
+    <title>The Vintage Mosaic - Artă si Design Vintage</title>
+
+    <style>
+        :root {
+            /* variabile pentru spatiere si stilizare */
+            --horizontal-padding: 60px;
+            --zone-padding: 20px;
+            --header-bg: #645452;
+            --footer-bg: #645452;
+            --grid-bg: #ffffff;
+            --border-color: #d4af37;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --grid-gap-large: 40px;
+            --grid-gap-medium: 20px;
+            --grid-gap-small: 10px;
+            --grid-gap: var(--grid-gap-large);
+        }
+
+        body {
+            padding-left: var(--horizontal-padding);
+            padding-right: var(--horizontal-padding);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* stilizare header */
+        header {
+            text-align: center;
+            background-color: var(--header-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            padding: var(--zone-padding);
+            margin-bottom: 20px;
+        }
+
+        /* stilizare footer */
+        footer {
+            background-color: var(--footer-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            padding: var(--zone-padding);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* stilizare container grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: var(--grid-gap);
+            margin-bottom: 20px;
+        }
+
+        /* stilizare celule grid */
+        .grid-container > div {
+            background-color: var(--grid-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            padding: var(--zone-padding);
+        }
+
+        /* imagini, iframes, videoclipuri */
+        img, iframe, video {
+            width: 100%;
+            max-width: 600px;
+            min-width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+
+    /* stilizare tip buton*/
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #b8860b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<header>
+    <h2>The Vintage Mosaic</h2>
+    <nav>
+        <ul>
+            <li><a href = "#Acasa">Acasa</a>
+            </li>
+            <li><a href = "#Categorii">Categorii</a>
+            </li>
+            <li><a href = "#Parteneri">Parteneri</a>
+            </li>
+            <li><a href = "#Profil">Profil</a>
+            </li>
+            <li><a href = "#Contact">Contact</a>
+            </li>
+            <li><a href = "#faq">Faq</a>
+            </li>
+            <li><a href = "#oferte">Oferte</a>
+            </li>
+            <li><a href = "#informatii">Informatii</a>
+            </li>
+        </ul>
+        <div class="container-iframe">
+            <div class="taburi-iframe">
+                <a href="https://www.youtube.com/embed/UPk56BR1Cmk" target="ifr-video">Importanta artei</a>
+            </div>
+            <iframe name="ifr-video" width="100" height="315" src="https://www.youtube.com/embed/UPk56BR1Cmk"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border:0;"></iframe>
+        </div>
+    </nav>
+
+</header>
+<main>
+
+    <section id="Acasa">
+        <h2>Acasa</h2>
+        <p>“The purpose of art is washing the dust of daily life off our souls.”</p>
+        <p>
+            <strong>-Pablo Picasso</strong>
+        </p>
+
+    </section>
+    <section id="Categorii">
+        <h3>Categorii</h3>
+
+        <section id="mobilier-de-epoca">
+            <h3>Mobilier de epoca</h3>
+            <p>Piese de mobilier <b>restaurate</b> sau <b>autentice</b> din diferite perioade istorice.</p>
+        </section>
+
+        <section id="Arta-Plastica">
+            <h3>Arta plastica</h3>
+            <p>Arta valoroasa apartinand diferitelor <b>stiluri</b>.</p>
+        </section>
+
+        <section id="Bijuterii-vintage">
+            <h3>Bijuterii vintage</h3>
+            <p>Bijuterii cu o <b>valoare stilistica si istorica</b> importanta.</p>
+        </section>
+
+        <section id="Obiecte-decorative">
+            <h3>Obiecte decorative</h3>
+            <p>Obiecte cu uz decorativ din descolele <b>XVII,XIX,XX</b></p>
+        </section>
+
+        <section id="Ceasuri-vintage">
+            <h3>Ceasuri vintage</h3>
+            <p>Ceasuri produse de <b>designeri</b> celebri cu valoare stilistica si istorica</p>
+        </section>
+
+        <section id="Portelanuri-si-ceramica">
+            <h3>Portelanuri si ceramica</h3>
+            <p>Portelanuri si ceramica provenind din <b>epoca Tudor</b> si <b>dinastia Quing</b> </p>
+        </section>
+
+    </section>
+
+    <section id="produse">
+        <h2>Produse</h2>
+        <div class="grid-container">
+            <div>Portelan chinezesc sex XIX
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chinese_-_Flask_-_Walters_491632_%28square%29.jpg/1200px-Chinese_-_Flask_-_Walters_491632_%28square%29.jpg" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chinese_-_Flask_-_Walters_491632_%28square%29.jpg/1200px-Chinese_-_Flask_-_Walters_491632_%28square%29.jpg" alt="Descriere imagine">
+                </a>
+            </div>
+            <div>Copie Carul cu Boi
+                <a href="https://cdn.adh.reperio.news/image-d/d2a8f84c-ca6a-484c-b9fd-0ad2b90901eb/index.jpeg?p=a%3D1%26co%3D1.05%26w%3D1000%26h%3D669%26f%3Dwebp" target="_blank">
+                    <img src="https://cdn.adh.reperio.news/image-d/d2a8f84c-ca6a-484c-b9fd-0ad2b90901eb/index.jpeg?p=a%3D1%26co%3D1.05%26w%3D1000%26h%3D669%26f%3Dwebp" alt="Descriere imagine">
+                </a>
+            </div>
+            <div>Set pahare cristal de Bohemia
+                <a href="https://bohemiashop.ro/wp-content/uploads/2023/03/Pahare_de_vin_Sheffield_12101-52820-240.jpg" target="_blank">
+                    <img src="https://bohemiashop.ro/wp-content/uploads/2023/03/Pahare_de_vin_Sheffield_12101-52820-240.jpg" alt="Descriere imagine">
+                </a>
+            </div>
+            <div>Vaza japoneza
+                <a href="https://i.etsystatic.com/6310889/r/il/6fa9a1/5293218995/il_1588xN.5293218995_dhtx.jpg" target="_blank">
+                    <img src="https://i.etsystatic.com/6310889/r/il/6fa9a1/5293218995/il_1588xN.5293218995_dhtx.jpg" alt="Descriere imagine">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Parteneri">
+        <h2>Parteneri</h2>
+        <ol>
+            <li>
+                <a href="https://www.hugoboss.com/ro/en/home">Hugo Boss</a>
+            </li>
+            <li>
+                <a href="https://www.cartier.com/en-us/home">Cartier</a>
+            </li>
+            <li>
+                <a href="https://www.tiffany.com/">Tiffany & Co</a>
+            </li>
+            <li>
+                <a href="https://fr.lalique.com/en?gad_source=1&gclid=CjwKCAiA5pq-BhBuEiwAvkzVZdIWcO0cJTxd0sZzHEeCLVuCI47t_N37EHZlCqRRAT1gzKmbqqWlMRoCA04QAvD_BwE">Lalique</a>
+            </li>
+            <li>
+                <a href="https://www.rolex.com/en-us">Rolex</a>
+            </li>
+            <li>
+                <a href="https://europe.singer.com/?srsltid=AfmBOoogRQ04LX_POpB4Hx9WYRH-hoat2erOT94_ZMBIFXl_r-UMWBGP">Singer</a>
+            </li>
+            <li>
+                <a href="https://www.faberge.com/?srsltid=AfmBOor50GZu10FdceJdaUhDmzdUPAbq8EbbtI6UbNboHo2XO75uh2Em">Fabergé</a>
+            </li>
+        </ol>
+    </section>
+
+    <section id="Profil">
+        <h2>Profil</h2>
+        <p>Introduceti numele de utilizator</p>
+        <p>Introduceti parola</p>
+    </section>
+
+    <section id="Contact">
+        <h2>Contact</h2>
+        <p>Email: </p>
+        <a href="mailto:vintage_Mosaic@gmail.com">vintage_Mosaic@gmail.com</a>
+        <p>Numar telefon contact: </p>
+        <a href="tel:+40723049265">+40 723 049 265</a>
+        <p>Adreasa: </p>
+        <a href="https://www.google.com/maps/place/Strada+Doctor+Dimitrie+Ernici+4,+Piatra+Neam%C8%9B/@46.9340702,26.3691309,37m/data=!3m1!1e3!4m6!3m5!1s0x473555cbad7f9a7d:0x8e8083c6aa9c335b!8m2!3d46.9340702!4d26.3692918!16s%2Fg%2F11pzxp0l17?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+            Sediul Companiei
+        </a>
+        <p>Link media Whatsapp: </p>
+        <a href="https://wa.me/40723049265" target="_blank">Deschide conversatia WhatsApp</a>
+    </section>
+
+    <section id="faq">
+        <h2>Intrebari Frecvente</h2>
+        <details>
+            <summary>Ce este The Vintage Mosaic?</summary>
+            <p>The Vintage Mosaic este un magazin dedicat artei <b>vintage</b>, oferind piese de mobilier, bijuterii și obiecte decorative unice.</p>
+        </details>
+        <details>
+            <summary>Cum se plaseaza o comanda?</summary>
+            <p>Pentru a plasa o comandă, navigati la sectiunea <b>Profil</b>, autentificati-va si urmati pasii de checkout.</p>
+        </details>
+        <details>
+            <summary>Ce modalitati de plată sunt acceptate?</summary>
+            <p>Acceptam plati prin <i>card de credit</i>, transfer bancar si diverse metode de plata online.</p>
+        </details>
+    </section>
+
+    <section id="oferte">
+        <h2>Oferte Speciale</h2>
+        <details>
+            <summary>Reduceri de vara</summary>
+            <p>Beneficiati de reduceri de pana la <b>40%</b> la selectia de articole <b>vintage</b> in timpul verii.</p>
+        </details>
+        <details>
+            <summary>Promotie de Craciun</summary>
+            <p>Achizitionati cadouri unice cu preturi speciale si surprize festive, valabile doar in <i>sezonul rece</i>.</p>
+        </details>
+    </section>
+
+    <section id="informatii">
+        <h2>Informatii Suplimentare</h2>
+        <details>
+            <summary>Cum functioneaza programul de fidelitate?</summary>
+            <p>Prin inscrierea in programul de fidelitate, beneficiati de puncte la fiecare achizitie, ce pot fi transformate în <b>reduceri</b>.</p>
+        </details>
+        <details>
+            <summary>Detalii despre livrare</summary>
+            <p>Livrarea este gratuita pentru comenzile ce depasesc 2000 de lei. Consultati sectiunea de <strong>atentionare</strong> pentru termeni si conditii.</p>
+        </details>
+        <details>
+            <summary>Raportul de aur din produs</summary>
+            <p>
+                Raportul de aur este notat cu &phi; . Formula de calcul este:
+            </p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <mi>&phi;</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <msqrt>
+                                <mn>5</mn>
+                            </msqrt>
+                        </mrow>
+                        <mn>2</mn>
+                    </mfrac>
+                </mrow>
+            </math>
+        </details>
+    </section>
+
+    <section id="facultate">
+        <h2>Facultatea de Matematica si Informatica</h2>
+        <p>
+            Adresa:
+            <a href="https://www.google.com/maps/place/Facultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83/@44.4344659,26.0976765,879m/data=!3m1!1e3!4m6!3m5!1s0x40b1ff472f47f047:0x493984726f0235f9!8m2!3d44.4355355!4d26.0995867!16s%2Fg%2F1td63tdh?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                Facultatea de Matematica si Informatica
+            </a>
+        </p>
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.895026424111!2d26.0976765!3d44.4355355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1679999999999"
+                width="300"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+    </section>
+
+</main>
+<footer>
+    <a href = "#Acasa">Acasa</a>
+    <a href = "#Categorii">Categorii</a>
+    <a href = "#Parteneri">Parteneri</a>
+    <a href = "#Contact">Contact</a>
+    <a href = "#Acasa" download>Download Index</a>
+
+    <section id="Termeni-si-conditii">
+        <h2>Termeni si Conditii</h2>
+        <embed src="https://ascendis.ro/assets/app/docs/termeni-si-conditii-ro.pdf" width="500" height="300">
+
+        <p>PDF-ul nu poate fi afisat.</p>
+
+    </section>
+
+    <small>&copy; <time datetime="2025-03-05">5 martie 2025</time> Toate drepturile rezervate.</small>
+</footer>
+</body>
+</html>
+
+

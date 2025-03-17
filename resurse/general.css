@@ -1,0 +1,77 @@
+
+:root {
+    /* variabile pentru spatiere si stilizare */
+    --horizontal-padding: 60px;
+    --zone-padding: 20px;
+    --header-bg: #645452;
+    --footer-bg: #645452;
+    --grid-bg: #ffffff;
+    --border-color: #d4af37;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --grid-gap-large: 40px;
+    --grid-gap-medium: 20px;
+    --grid-gap-small: 10px;
+    --grid-gap: var(--grid-gap-large);
+}
+
+body {
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* stilizare header */
+header {
+    background-color: var(--header-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: var(--zone-padding);
+    margin-bottom: 20px;
+}
+
+/* stilizare footer */
+footer {
+    background-color: var(--footer-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: var(--zone-padding);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* stilizare container grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: var(--grid-gap);
+    margin-bottom: 20px;
+}
+
+/* stilizare celule grid */
+.grid-container > div {
+    background-color: var(--grid-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: var(--zone-padding);
+}
+
+/* imagini, iframes, videoclipuri */
+img, iframe, video {
+    width: 100%;
+    max-width: 600px;
+    min-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
