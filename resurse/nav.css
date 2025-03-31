@@ -1,9 +1,18 @@
+
+/* stilizare tip buton*/
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 10px;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--color-highlight);
+    font-weight: bold;
 }
 
 nav ul li a {
