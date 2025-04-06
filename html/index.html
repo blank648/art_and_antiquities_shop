@@ -30,38 +30,77 @@
     <i class="fa-solid fa-star"></i>
     <h2>The Vintage Mosaic</h2>
     <i class="fa-solid fa-cog fa-spin"></i>
-    <nav>
-        <ul>
-            <li><a href = "#zona1">Acasa</a>
+    <nav class="site-nav">
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="main-menu">
+            <li class="home-link">
+                <a href="index.html">Acasa</a>
             </li>
-            <li><a href = "#zona2">Produse</a>
+            <li>
+                <a href="#zona2">Produse</a>
             </li>
-            <li><a href = "#zona3">Categorii</a>
+            <li>
+                <a href="#zona3">Categorii</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#mobilier-de-epoca">Bijuterii vintage</a>
+                    </li>
+                    <li>
+                        <a href = "#arta-plastica">Arta Plastica</a>
+                    </li>
+                    <li>
+                        <a href = "#bijuterii-vintage">Bijuterii Vintage</a>
+                    </li>
+                    <li>
+                        <a href = "#ceasuri-vintage">Ceasuri Vintage</a>
+                    </li>
+                    <li>
+                        <a href = "#portelanuri-si-ceramica">Portelanuri si Ceramica</a>
+                    </li>
+                </ul>
             </li>
-            <li><a href = "#zona4">Parteneri</a>
+            <li>
+                <a href="#">Parteneri</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#zona4">Parteneri</a>
+                    </li>
+                    <li>
+                        <a href="#implicarea culturala">Evenimente</a>
+                    </li>
+                </ul>
             </li>
-            <li><a href = "#zona5">Profil</a>
+            <li>
+                <a href="#zona5">Profil</a>
             </li>
-            <li><a href = "#zona6">Contact</a>
+            <li>
+                <a href="#zona6">Contact</a>
             </li>
-            <li><a href = "#zona7">Faq</a>
+            <li>
+                <a href="#zona7">Faq</a>
             </li>
-            <li><a href = "#zona8">Oferte</a>
+            <li>
+                <a href="#zona8">Oferte</a>
             </li>
-            <li><a href = "#informatii">Informatii</a>
+            <li>
+                <a href="#informatii">Informatii</a>
             </li>
         </ul>
-        <div class="container-iframe">
-            <div class="taburi-iframe">
-                <a href="https://www.youtube.com/embed/UPk56BR1Cmk" target="ifr-video">Importanta artei</a>
-            </div>
-            <iframe name="ifr-video" width="100" height="315" src="https://www.youtube.com/embed/UPk56BR1Cmk"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen style="border:0;"></iframe>
-        </div>
     </nav>
-
+    <div class="container-iframe">
+        <div class="taburi-iframe">
+            <a href="https://www.youtube.com/embed/UPk56BR1Cmk" target="ifr-video">Importanta artei</a>
+        </div>
+        <iframe name="ifr-video" width="100" height="315" src="https://www.youtube.com/embed/UPk56BR1Cmk"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen style="border:0;"></iframe>
+    </div>
 </header>
+
 <main>
 
     <section id="zona1">
@@ -103,17 +142,17 @@
     <section id="zona3">
         <h3>Categorii</h3>
 
-        <section id="mobilier-de-epoca">
+        <section id = "mobilier-de-epoca">
             <h3>Mobilier de epoca</h3>
             <p>Piese de mobilier <b>restaurate</b> sau <b>autentice</b> din diferite perioade istorice.</p>
         </section>
 
-        <section id="Arta-Plastica">
+        <section id = "arta-plastica">
             <h3>Arta plastica</h3>
             <p>Arta valoroasa apartinand diferitelor <b>stiluri</b>.</p>
         </section>
 
-        <section id="Bijuterii-vintage">
+        <section id = "bijuterii-vintage">
             <h3>Bijuterii vintage</h3>
             <iframe
                     width="560"
@@ -126,17 +165,17 @@
             <p>Bijuterii cu o <b>valoare stilistica si istorica</b> importanta.</p>
         </section>
 
-        <section id="Obiecte-decorative">
+        <section id="obiecte-decorative">
             <h3>Obiecte decorative</h3>
             <p>Obiecte cu uz decorativ din descolele <b>XVII,XIX,XX</b></p>
         </section>
 
-        <section id="Ceasuri-vintage">
+        <section id="ceasuri-vintage">
             <h3>Ceasuri vintage</h3>
             <p>Ceasuri produse de <b>designeri</b> celebri cu valoare stilistica si istorica</p>
         </section>
 
-        <section id="Portelanuri-si-ceramica">
+        <section id="portelanuri-si-ceramica">
             <h3>Portelanuri si ceramica</h3>
             <p>Portelanuri si ceramica provenind din <b>epoca Tudor</b> si <b>dinastia Quing</b> </p>
         </section>
@@ -169,22 +208,23 @@
             </li>
         </ol>
 
-        <div class = "table-container">
-            <table>
-                <caption>
-                    Implicarea noastra la evenimente culturale
-                </caption>
+        <section id = "implicarea culturala">
+            <div class = "table-container">
+                <table>
+                    <caption>
+                        Implicarea noastra la evenimente culturale
+                    </caption>
 
-                <thead>
+                    <thead>
                     <tr>
                         <th>NR.</th>
                         <th>Eveniment</th>
                         <th>Locatie</th>
                         <th>Detalii</th>
                     </tr>
-                </thead>
+                    </thead>
 
-                <tbody>
+                    <tbody>
                     <tr>
                         <td>1</td>
                         <td>Epilog'89</td>
@@ -219,15 +259,16 @@
                         <td><a href="https://www.artsafari.ro/" target="tab-frame">Vezi detalii</a></td>
                     </tr>
 
-                </tbody>
+                    </tbody>
 
-                <tfoot>
+                    <tfoot>
                     <tr>
                         <td colspan="3"> Total evenimente </td>
                     </tr>
-                </tfoot>
-            </table>
-        </div>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
 
     </section>
 
@@ -344,14 +385,14 @@
     <a href = "#informatii">Informatii</a>
     <a href = "#zona1" download>Download Index</a>
 
-
     <section id="Termeni-si-conditii">
         <h2>Termeni si Conditii</h2>
         <embed src="https://ascendis.ro/assets/app/docs/termeni-si-conditii-ro.pdf" width="500" height="300">
 
         <p>PDF-ul nu poate fi afisat.</p>
-
     </section>
+
+    <p class = "banner">Acesta este un proiect scolar</p>
 
     <small>&copy; <time datetime="2025-03-05">5 martie 2025</time> Toate drepturile rezervate.</small>
 </footer>
@@ -361,6 +402,16 @@
         <span class="triangle"></span>
     </span>
 </a>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainMenu = document.querySelector(".main-menu");
+        menuToggle.addEventListener("click", function() {
+            mainMenu.classList.toggle("open");
+        });
+    });
+</script>
 
 </body>
 </html>

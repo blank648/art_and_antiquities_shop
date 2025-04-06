@@ -28,3 +28,49 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #b8860b;
 }
+
+/* etapa 3 */
+/*ex 2 */
+@media print{
+    nav .main-menu{
+        display: block;
+    }
+    nav.main-menu li{
+        display: block;
+    }
+    nav.main-menu li ul{
+        display: block;
+        padding-left: 1rem;
+    }
+    /*page break dupa meniul din prima pag */
+    nav, main > section:first-of-type{
+        page-break-after: always;
+    }
+    /*page brak inainte de footer*/
+    footer{
+        page-break-before: always;
+    }
+    body::after{
+        content: "Numele/Prenumele";
+        position: fixed;
+        width: 60%;
+        height: 60%;
+        left: 20%;
+        top: 45%;
+        text-align: center;
+        color: rgba(0,0,0,0.3);
+        font-size: 3rem;
+        pointer-events: none;
+        z-index: 1000;
+        white-space: pre;
+    }
+    @page :left{
+        margin-left: 2cm;
+        margin-right: 1cm;
+    }
+    @page :right{
+        margin-left: 2cm;
+        margin-right: 1cm;
+    }
+
+}

@@ -75,6 +75,13 @@ table{
     --color1: #645452;
     --triangle-color: #645452;
     --triangle-hover: #645452;
+    /* etapa 3 */
+    --nav-bg: #333;
+    --nav-text: #fff;
+    --submenu-bg: #444;
+    --submenu-hover: #555;
+    --submenu-shadow: rgba(0, 0, 0, 0.5);
+
 }
 /* ecrane medii */
 @media (max-width: 1024px) {
@@ -418,10 +425,7 @@ tfoot tr td:not(:last-child):nth-child(even){
     border-right: 2px solid var(--border-color);
     border-top: none;
     border-bottom: none;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -431,8 +435,9 @@ tfoot tr td:not(:last-child):nth-child(even){
 #link-top .triangle{
     width: 0;
     height: 0;
-    border-left: 2px solid transparent;
-    border-bottom: 2px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid transparent;
     transition: transform 0.4s ease, border-bottom-color 0.4s ease;
 }
 
@@ -499,3 +504,140 @@ mfrac{
 msqrt{
     color: #e9c46a;
 }
+
+/* etapa 3 */
+/* exercitiul 1 */
+
+.site-nav {
+    background-color: var(--nav-bg);
+    position: relative;
+}
+.menu-toggle {
+    display: none;
+    color: var(--nav-text);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.main-menu li {
+    position: relative;
+}
+.main-menu li a {
+    display: block;
+    padding: 1rem;
+    color: var(--nav-text);
+    text-decoration: none;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+.main-menu li a:hover {
+    background-color: var(--submenu-hover);
+    box-shadow: inset 0 0 10px var(--submenu-shadow);
+}
+/* Afișăm submenu doar la hover pe li, nu pe a */
+.main-menu li:hover > .submenu {
+    transform: scaleY(1);
+}
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--submenu-bg);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    z-index: 999;
+    overflow: hidden;  /* Ascunde conținutul când scaleY este 0 */
+}
+.submenu li a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    position: relative;
+    transition: background-color 0.4s ease;
+}
+.submenu li a::before {
+    content: "▶";
+    position: absolute;
+    left: 0.5rem;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    font-size: 0.9rem;
+}
+.submenu li a:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* ecran mic */
+@media (max-width: 768px){
+    /* hamburger button */
+    .menu-toggle {
+        display: block;
+    }
+    /* meniul principal devine vertical si ascuns la inceput */
+    .main-menu {
+        display: none;
+        flex-direction: column;
+    }
+    .main-menu li {
+        width: 100%;
+    }
+    .main-menu li a {
+        padding: 1rem;
+    }
+    /* eliminam sageata */
+    .submenu li a::before {
+        content: none;
+    }
+    /* fortam meniul pe ecran mic */
+    .main-menu.open {
+        display: flex;
+    }
+}
+
+/* ex 2 */
+@media print{
+    /* bannerul din footer */
+    footer p.banner{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        border: double 2px black;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+    /* ascundem elementele media */
+    img,video,iframe,.taburi-iframe,a#link-top{
+        display: none;
+    }
+    /* grid block */
+    main{
+        display: block;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
