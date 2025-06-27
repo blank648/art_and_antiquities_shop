@@ -1,0 +1,22 @@
+<% include ./partials/head.ejs %>
+<main class="container py-4">
+
+    <article class="row">
+        <div class="col-md-6">
+            <img src="/resurse/imagini/<%=item.img%>" class="img-fluid" alt="<%=item.name%>">
+        </div>
+        <div class="col-md-6">
+            <h1><%=item.name%></h1>
+            <p><strong>Pret:</strong> <%=item.price%> lei</p>
+            <p><strong>Epoca:</strong> <%=item.era%></p>
+            <p><strong>Material:</strong> <%=item.material%></p>
+            <p><strong>Dimensiuni:</strong> <%=item.dimensions%></p>
+            <p><strong>Greutate:</strong> <%=item.weight%></p>
+            <hr>
+            <p><%=item.description%></p>
+            <a href="/produse" class="btn btn-secondary mt-3">Înapoi la listă</a>
+        </div>
+    </article>
+
+</main>
+<% include ./partials/footer.ejs %>

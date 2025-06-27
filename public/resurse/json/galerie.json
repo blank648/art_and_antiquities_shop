@@ -1,0 +1,119 @@
+{
+  "cale_baza": "/resurse/imagini/galerie/",
+  "imagini": [
+    {
+      "cale_fisier": "Alphonse Mucha.png",
+      "titlu": "Stil Alphonse Mucha",
+      "descriere": "O operă de artă în stilul Art Nouveau de Alphonse Mucha.",
+      "anotimp": "primavara"
+    },
+    {
+      "cale_fisier": "Botanical Prints.png",
+      "titlu": "Imprimeuri Botanice",
+      "descriere": "O colecție de ilustrații botanice detaliate, perfecte pentru vară.",
+      "anotimp": "vara"
+    },
+    {
+      "cale_fisier": "Casetofon Clasic.png",
+      "titlu": "Casetofon Clasic",
+      "descriere": "Un casetofon portabil de epocă, simbol al toamnei anilor '80.",
+      "anotimp": "toamna"
+    },
+    {
+      "cale_fisier": "Dog Figure.png",
+      "titlu": "Figurină Câine",
+      "descriere": "O figurină din ceramică reprezentând un câine, obiect de colecție.",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "Felix Austria.png",
+      "titlu": "Hartă Felix Austria",
+      "descriere": "O hartă istorică detaliată a imperiului austriac.",
+      "anotimp": "toamna"
+    },
+    {
+      "cale_fisier": "Folk Art.png",
+      "titlu": "Artă Populară",
+      "descriere": "Element de artă populară cu motive tradiționale.",
+      "anotimp": "primavara"
+    },
+    {
+      "cale_fisier": "Golden Rhino.png",
+      "titlu": "Rinocer Auriu",
+      "descriere": "Statuetă decorativă modernă, un rinocer auriu.",
+      "anotimp": "vara"
+    },
+    {
+      "cale_fisier": "Grden sculpture.png",
+      "titlu": "Sculptură de Grădină",
+      "descriere": "Sculptură clasică pentru decorarea unei grădini de vară.",
+      "anotimp": "vara"
+    },
+    {
+      "cale_fisier": "Japanese frog prints.png",
+      "titlu": "Imprimeuri Japoneze",
+      "descriere": "Ilustrații japoneze tradiționale cu broaște.",
+      "anotimp": "primavara"
+    },
+    {
+      "cale_fisier": "JD1_9533.jpg",
+      "titlu": "Eleganță Clasică",
+      "descriere": "Un interior elegant, cu piese de mobilier clasice.",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "Juniper Tree.png",
+      "titlu": "Ienupăr",
+      "descriere": "O ilustrație botanică detaliată a unui ienupăr.",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "Lether Chair.jpeg",
+      "titlu": "Fotoliu de Piele",
+      "descriere": "Un fotoliu de piele masiv, stil vintage.",
+      "anotimp": "toamna"
+    },
+    {
+      "cale_fisier": "Pahare de vin Sheffield.png",
+      "titlu": "Pahare de Vin Sheffield",
+      "descriere": "Set de pahare de vin din cristal de Bohemia, model Sheffield.",
+      "anotimp": "iarna"
+    },
+    {
+      "cale_fisier": "Round table.png",
+      "titlu": "Masă Rotundă",
+      "descriere": "Masă rotundă din lemn masiv, cu design clasic.",
+      "anotimp": "toamna"
+    },
+    {
+      "cale_fisier": "scau​n vintage.png",
+      "titlu": "Scaun Vintage",
+      "descriere": "Scaun din lemn cu design de la mijlocul secolului.",
+      "anotimp": "vara"
+    },
+    {
+      "cale_fisier": "Screenshot 2025-03-30 225001.png",
+      "titlu": "Porțelan Chinezesc",
+      "descriere": "Detaliu vas din porțelan chinezesc din secolul al XIX-lea.",
+      "anotimp": "primavara"
+    },
+    {
+      "cale_fisier": "Screenshot 2025-03-30 225358.png",
+      "titlu": "Copie 'Carul cu Boi'",
+      "descriere": "O copie de calitate a celebrei picturi 'Carul cu Boi'.",
+      "anotimp": "vara"
+    },
+    {
+      "cale_fisier": "Vaza japoneza.png",
+      "titlu": "Vază Japoneză",
+      "descriere": "Vază din ceramică Imari cu decor policrom.",
+      "anotimp": "primavara"
+    },
+    {
+      "cale_fisier": "Woman Figure.png",
+      "titlu": "Figurină Femeie",
+      "descriere": "O figurină din ceramică reprezentând o femeie, obiect de colecție.",
+      "anotimp": "iarna"
+    }
+  ]
+}

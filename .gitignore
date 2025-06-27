@@ -1,0 +1,17 @@
+# folderul cu dependințele Node.js
+node_modules/
+
+# folderele temporare si de log-uri create de script
+temp/
+temp1/
+logs/
+
+# fisiere de log generate
+*.log
+
+# fisiere specifice sistemului de operare sau editorului de cod
+.DS_Store
+.idea/
+
+# fisiere cu variabile de mediu
+.env

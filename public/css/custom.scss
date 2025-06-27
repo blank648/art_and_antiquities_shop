@@ -1,0 +1,56 @@
+//etapa 5 customizare bootstrap
+//import functii si variabile bootstrap pt acces
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+//suprascriem tema cromatica
+$body-bg: #f3f1e7;
+$theme-colors: (
+        "primary": #645452,
+        "secondary": #7e6d3e,
+        "success": #8f9f6e,
+        "info":    #6e8fa2,
+        "warning": #d4af37,
+        "danger":  #a24e4e
+);
+
+//dark mode
+$dark-theme-colors: (
+        "primary": #333333,
+        "secondary": #555555,
+        "success": #7e8f6d,
+        "info":    #4e6fa2,
+        "warning": #d4af37,
+        "danger":  #8a2b2b
+);
+
+//culori font specifice
+$headings-color: #3a2f2f;
+$body-color: #2e2a28;
+
+//breakpoints personalizate
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px, //ecrane medii
+        lg: 992px, //ecrane mari
+        xl: 1200px,
+);
+
+//border-radius global
+$border-radius: .75rem;
+$btn-border-radius: .5rem;
+
+//dimensiuni heading-uri
+$headings-font-family: "Roboto", sans-serif;
+$headings-line-height: 1.2;
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+
+//font implicit
+$font-family-base: "Roboto", sans-serif;
+
+//import bootstrap dupa suprascieri
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,281 @@
+<%- include('partials/head', { title: 'The Vintage Mosaic - Artă și Design Vintage' }) %>
+<%- include('partials/header') %>
+
+<main>
+
+    <section id="zona1">
+        <h2>Acasa</h2>
+        //etapa 5 reflexie text
+        <div class="text-reflectie">
+            <h2 data-text="The Vintage Mosaic">The Vintage Mosaic</h2>
+        </div>
+        <p>“The purpose of art is washing the dust of daily life off our souls.”</p>
+        <p>
+            <strong>-Pablo Picasso</strong>
+        </p>
+
+        <h2>Galerie statica</h2>
+
+        <section id="galerie-animata">
+            <h2>Galerie animată</h2>
+            <div class="gallery-animata">
+                <% images.forEach((img, idx) => { %>
+                    <div class="frame frame-<%= idx %>"
+                         style="background-image:url('/resurse/imagini/<%= img %>')">
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="video-prezentare" style="padding: 20px; text-align: center;">
+        <h2>Video de Prezentare</h2>
+        <video controls poster="/resurse/imagini/Juniper-Tree.png" preload="metadata" style="width: 100%; max-width: 800px; margin: 0 auto;">
+            <source src="/resurse/imagini/20250626_1242_Antique Store Elegance_storyboard_01jynsw1daeytrktrr0xandfjp8.mp4" type="video/mp4">
+            <source src="/resurse/imagini/video_convertit.webm" type="video/webm">
+        </video>
+    </section>
+
+    <section id="zona2">
+        <h2>Produse</h2>
+        <div class="grid-container">
+            <figure class="product-figure">
+                <img src="../public/resurse/imagini/Screenshot%202025-03-30%20225001.png"
+                     alt="Descriere a imaginii"
+                     style="max-width: 80%; height: auto;">
+                <figcaption>Portelan chinezesc sec. XIX</figcaption>
+            </figure>
+            <div>Copie Carul cu Boi
+                <img src="../public/resurse/imagini/Screenshot 2025-03-30 225358.png"
+                     alt="Descriere a imaginii"
+                     style="max-width: 80%; height: auto;">
+            </div>
+            <div>Set pahare cristal de Bohemia
+                <a href="https://bohemiashop.ro/wp-content/uploads/2023/03/Pahare_de_vin_Sheffield_12101-52820-240.jpg" target="_blank">
+                    <img src="https://bohemiashop.ro/wp-content/uploads/2023/03/Pahare_de_vin_Sheffield_12101-52820-240.jpg" alt="Descriere imagine">
+                </a>
+            </div>
+            <div>Vaza japoneza
+                <a href="https://i.etsystatic.com/6310889/r/il/6fa9a1/5293218995/il_1588xN.5293218995_dhtx.jpg" target="_blank">
+                    <img src="https://i.etsystatic.com/6310889/r/il/6fa9a1/5293218995/il_1588xN.5293218995_dhtx.jpg" alt="Descriere imagine">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="zona3">
+        <h3>Categorii</h3>
+
+        <section id = "mobilier-de-epoca">
+            <h3>Mobilier de epoca</h3>
+            <p>Piese de mobilier <b>restaurate</b> sau <b>autentice</b> din diferite perioade istorice.</p>
+        </section>
+
+        <section id = "arta-plastica">
+            <h3>Arta plastica</h3>
+            <p>Arta valoroasa apartinand diferitelor <b>stiluri</b>.</p>
+        </section>
+
+        <section id = "bijuterii-vintage">
+            <h3>Bijuterii vintage</h3>
+            <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/lz8wRI2C-MI"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <p>Bijuterii cu o <b>valoare stilistica si istorica</b> importanta.</p>
+        </section>
+
+        <section id="obiecte-decorative">
+            <h3>Obiecte decorative</h3>
+            <p>Obiecte cu uz decorativ din descolele <b>XVII,XIX,XX</b></p>
+        </section>
+
+        <section id="ceasuri-vintage">
+            <h3>Ceasuri vintage</h3>
+            <p>Ceasuri produse de <b>designeri</b> celebri cu valoare stilistica si istorica</p>
+        </section>
+
+        <section id="portelanuri-si-ceramica">
+            <h3>Portelanuri si ceramica</h3>
+            <p>Portelanuri si ceramica provenind din <b>epoca Tudor</b> si <b>dinastia Quing</b> </p>
+        </section>
+
+    </section>
+
+    <section id="zona4">
+        <h2>Parteneri si Evenimente</h2>
+        <div class="duotone"
+             style="--img-url: url('../public/resurse/imagini/JD1_9533.jpg'); width:100%; height:200px; margin:1rem 0;">
+        </div>
+        <ol>
+            <li>
+                <a href="https://www.hugoboss.com/ro/en/home" target="tab-frame">Hugo Boss</a>
+            </li>
+            <li>
+                <a href="https://www.cartier.com/en-us/home" target="tab-frame">Cartier</a>
+            </li>
+            <li>
+                <a href="https://www.tiffany.com/" target="tab-frame">Tiffany & Co</a>
+            </li>
+            <li>
+                <a href="https://fr.lalique.com/en?gad_source=1&gclid=CjwKCAiA5pq-BhBuEiwAvkzVZdIWcO0cJTxd0sZzHEeCLVuCI47t_N37EHZlCqRRAT1gzKmbqqWlMRoCA04QAvD_BwE" target="tab-frame">Lalique</a>
+            </li>
+            <li>
+                <a href="https://www.rolex.com/en-us" target="tab-frame">Rolex</a>
+            </li>
+            <li>
+                <a href="https://europe.singer.com/?srsltid=AfmBOoogRQ04LX_POpB4Hx9WYRH-hoat2erOT94_ZMBIFXl_r-UMWBGP" target="tab-frame">Singer</a>
+            </li>
+            <li>
+                <a href="https://www.faberge.com/?srsltid=AfmBOor50GZu10FdceJdaUhDmzdUPAbq8EbbtI6UbNboHo2XO75uh2Em" target="tab-frame">Fabergé</a>
+            </li>
+        </ol>
+
+        <section id = "implicarea culturala">
+            <div class = "table-container">
+                <table>
+                    <caption>
+                        Implicarea noastra la evenimente culturale
+                    </caption>
+
+                    <thead>
+                    <tr>
+                        <th>NR.</th>
+                        <th>Eveniment</th>
+                        <th>Locatie</th>
+                        <th>Detalii</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Epilog'89</td>
+                        <td>Muzeul Național al Satului „Dimitrie Gusti”</td>
+                        <td><a href="https://muzeul-satului.ro/" target="tab-frame">Vezi detalii</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Expoziția tematică „Portretul: Imagine şi Oglindire”</td>
+                        <td>Palatul Suțu</td>
+                        <td><a href="https://muzeulbucurestiului.ro/en/evenimente.html" target="tab-frame">Vezi detalii</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Stela Ilie. Acasa</td>
+                        <td>Muzeul Național de Artă Contemporană</td>
+                        <td><a href="https://www.facebook.com/mnacbucharest?locale=ro_RO" target="tab-frame">Vezi detalii</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td colspan="2">Linii paralele. Aventuri ale modernității în Croația 1949 – 1998</td>
+                        <td><a href="https://www.mnac.ro/home" target="tab-frame">Vezi detalii</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Young Blood 4.0 | Noul val de artiști contemporani</td>
+                        <td>Art Safari</td>
+                        <td><a href="https://www.artsafari.ro/" target="tab-frame">Vezi detalii</a></td>
+                    </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                    <tr>
+                        <td colspan="3"> Total evenimente </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="zona5">
+        <h2>Profil</h2>
+        <p>Introduceti numele de utilizator</p>
+        <p>Introduceti parola</p>
+    </section>
+
+    <section id="zona6">
+        <section id="text-coloane">
+        <h2>Intrebari Frecvente</h2>
+        <details>
+            <summary>Ce este The Vintage Mosaic?</summary>
+            <p>The Vintage Mosaic este un magazin dedicat artei <b>vintage</b>, oferind piese de mobilier, bijuterii și obiecte decorative unice.</p>
+        </details>
+        <details>
+            <summary>Cum se plaseaza o comanda?</summary>
+            <p>Pentru a plasa o comandă, navigati la sectiunea <b>Profil</b>, autentificati-va si urmati pasii de checkout.</p>
+        </details>
+        <details>
+            <summary>Ce modalitati de plată sunt acceptate?</summary>
+            <p>Acceptam plati prin <i>card de credit</i>, transfer bancar si diverse metode de plata online.</p>
+        </details>
+        </section>
+    </section>
+
+    <section id="zona7">
+        <h2>Oferte Speciale</h2>
+        <details>
+            <summary>Reduceri de vara</summary>
+            <p>Beneficiati de reduceri de pana la <b>40%</b> la selectia de articole <b>vintage</b> in timpul verii.</p>
+        </details>
+        <details>
+            <summary>Promotie de Craciun</summary>
+            <p>Achizitionati cadouri unice cu preturi speciale si surprize festive, valabile doar in <i>sezonul rece</i>.</p>
+        </details>
+        <div class="marquee">
+            <span>Urmatoarea expozitie incepe pe data de 1 iunie!</span>
+        </div>
+    </section>
+
+    <section id="zona8">
+        <h2>Informatii Suplimentare</h2>
+        //fancy hr
+        <hr class="fancy-hr">
+        <details>
+            <summary>Cum functioneaza programul de fidelitate?</summary>
+            <p>Prin inscrierea in programul de fidelitate, beneficiati de puncte la fiecare achizitie, ce pot fi transformate în <b>reduceri</b>.</p>
+        </details>
+        <details>
+            <summary>Detalii despre livrare</summary>
+            <p>Livrarea este gratuita pentru comenzile ce depasesc 2000 de lei. Consultati sectiunea de <strong>atentionare</strong> pentru termeni si conditii.</p>
+        </details>
+        <details>
+            <summary>Raportul de aur din produs</summary>
+            <p>
+                Raportul de aur este notat cu &phi; . Formula de calcul este:
+            </p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                    <mi>&phi;</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <msqrt>
+                                <mn>5</mn>
+                            </msqrt>
+                        </mrow>
+                        <mn>2</mn>
+                    </mfrac>
+                </mrow>
+            </math>
+        </details>
+    </section>
+
+
+</main>
+
+<%- include('partials/footer') %>

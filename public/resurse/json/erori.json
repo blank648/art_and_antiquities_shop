@@ -1,0 +1,32 @@
+{
+  "cale_baza": "/resurse/eroare/",
+  "eroare_default": {
+    "titlu": "Eroare de Server",
+    "text": "A aparut o problema neasteptata. Echipa noastra a fost notificata.",
+    "imagine": "default.png",
+    "status": 500
+  },
+  "info_erori": [
+    {
+      "identificator": 404,
+      "titlu": "404 - Pagina Inexistenta",
+      "text": "Oops! Se pare ca pagina pe care o cauti s-a ratacit printre antichitati.",
+      "imagine": "404.png",
+      "status": 404
+    },
+    {
+      "identificator": 403,
+      "titlu": "403 - Acces Interzis",
+      "text": "Ne pare rau, dar accesul in aceasta zona este restrictionat doar pentru personalul autorizat.",
+      "imagine": "403.png",
+      "status": 403
+    },
+    {
+      "identificator": 400,
+      "titlu": "400 - Cerere Neconforma",
+      "text": "Cererea ta nu a putut fi procesata. Te rugam sa nu incerci să accesezi direct fisierele server-ului.",
+      "imagine": "default.png",
+      "status": 400
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('partials/head', { title: 'Galerie Statica' }) %>
+</head>
+<body>
+<%- include('partials/header') %>
+
+<main>
+    <section id="galerie-statica" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+        <h1 style="text-align: center; margin-bottom: 1rem;">Galeria Noastra de Arta si Antichitati</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">O selectie de piese din colectia noastra, filtrate pentru anotimpul curent.</p>
+
+        <div class="galerie-container">
+
+            <% if (locals.imagini && locals.imagini.length > 0) { %>
+                <% imagini.forEach((img, index) => { %>
+
+                    <div class="galerie-item">
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="<%= locals.cale_baza %>mic/<%= img.cale_fisier %>">
+                                <img src="<%= locals.cale_baza %>mare/<%= img.cale_fisier %>"
+                                     alt="<%= img.descriere %>"
+                                     loading="lazy">
+                            </picture>
+                            <figcaption><%= index + 1 %>. <%= img.titlu %></figcaption>
+                        </figure>
+                    </div>
+
+                <% }) %>
+            <% } else { %>
+                <p>Nu exista imagini de afisat pentru anotimpul curent. Vă rugam reveniti!</p>
+            <% } %>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>
+</body>
+</html>

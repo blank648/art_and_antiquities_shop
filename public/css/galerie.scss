@@ -1,0 +1,56 @@
+// galerie.scss
+
+// interval (s) pentru fiecare imagine
+$interval: 5s !default;
+
+// durata totală a ciclului
+$total: $count * $interval !default;
+
+.gallery-animata {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border: 12px solid transparent;
+  border-image-source: url("../resurse/ico/apple-touch-icon.png");
+  border-image-slice: 30;
+  border-image-repeat: round;
+  animation: none;
+  // ascundem pe mediu/mic
+  @media(max-width: 1024px) { display: none; }
+
+  .frame {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slide $total linear infinite;
+
+    // delay-uri succesive
+    @for $i from 0 through $count - 1 {
+      &.frame-#{$i} {
+        animation-delay: $i * $interval;
+      }
+    }
+  }
+
+  &:hover .frame {
+    animation-play-state: paused;
+  }
+}
+
+// keyframes: clip-path pornește din centru și se lărgește spre margini
+@keyframes slide {
+  0%, 10% {
+    opacity: 1;
+    clip-path: inset(40% 0 40% 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  90%, 100% {
+    opacity: 0;
+    clip-path: inset(40% 0 40% 0);
+  }
+}

@@ -1,4 +1,3 @@
-
 /* stilizare tip buton*/
 nav ul {
     list-style: none;
@@ -50,6 +49,7 @@ nav ul li a:hover {
     footer{
         page-break-before: always;
     }
+    /* watermark */
     body::after{
         content: "Numele/Prenumele";
         position: fixed;
@@ -64,6 +64,7 @@ nav ul li a:hover {
         z-index: 1000;
         white-space: pre;
     }
+    /* margini diferite pentru stanga si dreapta */
     @page :left{
         margin-left: 2cm;
         margin-right: 1cm;

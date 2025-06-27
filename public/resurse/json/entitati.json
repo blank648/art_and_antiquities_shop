@@ -1,0 +1,27 @@
+[
+  {
+    "id": "portelan-chinezesc-xix",
+    "name": "Portelan chinezesc sec. XIX",
+    "category": "Portelanuri",
+    "price": 1250,
+    "era": "Secolul XIX",
+    "material": "Portelan",
+    "img": "Screenshot 2025-03-30 225001.jpg",
+    "description": "Vas flacon cu motive florale Ming.",
+    "dimensions": "20×12×30 cm",
+    "weight": "1.2kg"
+  },
+  {
+    "id": "vaza-japoneza",
+    "name": "Vaza japoneza",
+    "category": "Ceramica",
+    "price": 980,
+    "era": "Secolul XVIII",
+    "material": "Ceramica smaltuita",
+    "img": "Vaza japoneza.png",
+    "description": "Vaza Imari cu decor polichrom.",
+    "dimensions": "15×15×25 cm",
+    "weight": "0.8kg"
+  }
+
+]

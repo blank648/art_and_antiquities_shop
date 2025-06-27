@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('./head', { title: locals.title || 'Eroare' }) %>
+    <style>
+        .error-container { text-align: center; padding: 50px 20px; }
+        .error-container img { max-width: 250px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<%- include('./header') %>
+<main>
+    <div class="error-container">
+        <img src="<%= locals.imagine %>" alt="Imagine reprezentativa pentru eroare">
+        <h1><%= locals.titlu %></h1>
+        <p><%= locals.text %></p>
+        <a href="/" style="text-decoration: underline;">Inapoi la pagina principala</a>
+    </div>
+</main>
+<%- include('./footer') %>
+</body>
+</html>

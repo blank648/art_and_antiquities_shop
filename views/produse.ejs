@@ -1,0 +1,41 @@
+<% include ./partials/head.ejs %>
+<main class="container py-4">
+
+    <h1>Lista Entități</h1>
+
+    <!-- filtru simplu si sortare UI -->
+    <form class="row g-3 mb-4">
+        <select name="category" class="form-select col-auto">
+            <option value="">Toate</option>
+            <option value="Porțelanuri">Portelanuri</option>
+            <option value="Ceramică">Ceramica</option>
+            <!-- … -->
+        </select>
+        <select name="sort" class="form-select col-auto">
+            <option value="">— Sortare —</option>
+            <option value="price_asc">Pret ↑</option>
+            <option value="price_desc">Pret ↓</option>
+        </select>
+        <button class="btn btn-primary col-auto">Aplica</button>
+    </form>
+
+    <div class="row g-4">
+        <% items.forEach(item => { %>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="/resurse/imagini/<%=item.img%>" class="card-img-top" alt="<%=item.name%>">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><%=item.name%></h5>
+                    <p class="card-text mb-1"><strong>Preț:</strong> <%=item.price%> lei</p>
+                    <p class="card-text mb-2"><strong>Epoca:</strong> <%=item.era%></p>
+                    <a href="/produs/<%=item.id%>" class="mt-auto btn btn-outline-primary">
+                        Vezi detalii
+                    </a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+</main>
+<% include ./partials/footer.ejs %>

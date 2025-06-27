@@ -6,21 +6,21 @@
     <meta name="author" content="Diaconescu Adrian">
     <meta name="keywords" content="vintage, mozaic, arta, design, antichitate">
     <meta name="description" content="Website dedicat artei vintage si mozaicului, explorand frumusetea designului clasic.">
-    <title>The Vintage Mosaic - Artă si Design Vintage</title>
+    <title>The Vintage Mosaic - Arta si Design Vintage</title>
 
-    <link rel="icon" type="image/png" href="/./resurse/ico/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/./resurse/ico/favicon.svg" />
-    <link rel="shortcut icon" href="/./resurse/ico/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/./resurse/ico/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/resurse/ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/resurse/ico/favicon.svg" />
+    <link rel="shortcut icon" href="/resurse/ico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/resurse/ico/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="art_and_antiquities" />
-    <link rel="manifest" href="/./resurse/ico/site.webmanifest" />
+    <link rel="manifest" href="/resurse/ico/site.webmanifest" />
 
     <link rel='preconnect' href="https://fonts.googleapis.com">
     <link rel='preconnect' href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../resurse/general.css">
-    <link rel="stylesheet" href="../resurse/nav.css">
+    <link rel="stylesheet" href="../public/css/general.css">
+    <link rel="stylesheet" href="../public/css/nav.css">
 
 </head>
 
@@ -39,6 +39,14 @@
         <ul class="main-menu">
             <li class="home-link">
                 <a href="index.html">Acasa</a>
+            </li>
+            <li class = "gallery-link">
+                <a href = "#">Galerie</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="static_galery.html">Galerie statica</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#zona2">Produse</a>
@@ -86,9 +94,6 @@
             <li>
                 <a href="#zona8">Oferte</a>
             </li>
-            <li>
-                <a href="#informatii">Informatii</a>
-            </li>
         </ul>
     </nav>
     <div class="container-iframe">
@@ -116,13 +121,19 @@
     <section id="zona2">
         <h2>Produse</h2>
         <div class="grid-container">
-            <div>Portelan chinezesc sex XIX
-                    <img src="../resurse/Screenshot 2025-03-30 225001.png"
-                         alt="Descriere a imaginii"
-                         style="max-width: 80%; height: auto;">
-            </div>
+            <!-- taguri de tip figure si figcaption -->
+            <figure class="product-figure">
+                <picture>
+                    <img src="../public/resurse/imagini/Screenshot%202025-03-30%20225001.png"
+                         alt="Portelan chinezesc sec. XIX"
+                         loading="lazy"
+                         class="img-fluid">
+                </picture>
+                <figcaption>Portelan chinezesc sec. XIX</figcaption>
+            </figure>
+
             <div>Copie Carul cu Boi
-                <img src="../resurse/Screenshot 2025-03-30 225358.png"
+                <img src="../public/resurse/imagini/Screenshot%202025-03-30%20225358.png"
                      alt="Descriere a imaginii"
                      style="max-width: 80%; height: auto;">
             </div>
@@ -293,22 +304,6 @@
     </section>
 
     <section id="zona7">
-        <h2>Intrebari Frecvente</h2>
-        <details>
-            <summary>Ce este The Vintage Mosaic?</summary>
-            <p>The Vintage Mosaic este un magazin dedicat artei <b>vintage</b>, oferind piese de mobilier, bijuterii și obiecte decorative unice.</p>
-        </details>
-        <details>
-            <summary>Cum se plaseaza o comanda?</summary>
-            <p>Pentru a plasa o comandă, navigati la sectiunea <b>Profil</b>, autentificati-va si urmati pasii de checkout.</p>
-        </details>
-        <details>
-            <summary>Ce modalitati de plată sunt acceptate?</summary>
-            <p>Acceptam plati prin <i>card de credit</i>, transfer bancar si diverse metode de plata online.</p>
-        </details>
-    </section>
-
-    <section id="zona8">
         <h2>Oferte Speciale</h2>
         <details>
             <summary>Reduceri de vara</summary>
@@ -320,8 +315,9 @@
         </details>
     </section>
 
-    <section id="informatii">
+    <section id="zona8">
         <h2>Informatii Suplimentare</h2>
+        <!-- details si summary -->
         <details>
             <summary>Cum functioneaza programul de fidelitate?</summary>
             <p>Prin inscrierea in programul de fidelitate, beneficiati de puncte la fiecare achizitie, ce pot fi transformate în <b>reduceri</b>.</p>
@@ -382,8 +378,36 @@
     <a href = "#zona6">Contact</a>
     <a href = "#zona7">Intrebari Frecvente</a>
     <a href = "#zona8">Oferte</a>
-    <a href = "#informatii">Informatii</a>
     <a href = "#zona1" download>Download Index</a>
+
+    <!-- adresa in footer -->
+    <address>
+        <p>
+            Adresa:
+            <a href="https://www.google.com/maps/place/Facultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83/@44.4344659,26.0976765,879m/data=!3m1!1e3!4m6!3m5!1s0x40b1ff472f47f047:0x493984726f0235f9!8m2!3d44.4355355!4d26.0995867!16s%2Fg%2F1td63tdh?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                Facultatea de Matematica si Informatica
+                <abbr title="Facultatea de Matematică și Informatică">FMI</abbr>
+            </a>
+        </p>
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.895026424111!2d26.0976765!3d44.4355355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1679999999999"
+                width="300"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+        <p>Email: </p>
+        <a href="mailto:vintage_Mosaic@gmail.com">vintage_Mosaic@gmail.com</a>
+        <p>Numar telefon contact: </p>
+        <a href="tel:+40723049265">+40 723 049 265</a>
+        <p>Adreasa: </p>
+        <a href="https://www.google.com/maps/place/Strada+Doctor+Dimitrie+Ernici+4,+Piatra+Neam%C8%9B/@46.9340702,26.3691309,37m/data=!3m1!1e3!4m6!3m5!1s0x473555cbad7f9a7d:0x8e8083c6aa9c335b!8m2!3d46.9340702!4d26.3692918!16s%2Fg%2F11pzxp0l17?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+            Sediul Companiei
+        </a>
+        <p>Link media Whatsapp: </p>
+        <a href="https://wa.me/40723049265" target="_blank">Deschide conversatia WhatsApp</a>
+    </address>
 
     <section id="Termeni-si-conditii">
         <h2>Termeni si Conditii</h2>
@@ -394,6 +418,7 @@
 
     <p class = "banner">Acesta este un proiect scolar</p>
 
+    <!-- informatii de copyright -->
     <small>&copy; <time datetime="2025-03-05">5 martie 2025</time> Toate drepturile rezervate.</small>
 </footer>
 
