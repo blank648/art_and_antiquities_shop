@@ -1,0 +1,98 @@
+.gallery-animata {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border: 12px solid transparent;
+  border-image-source: url("../resurse/ico/apple-touch-icon.png");
+  border-image-slice: 30;
+  border-image-repeat: round;
+  animation: none;
+}
+@media (max-width: 1024px) {
+  .gallery-animata {
+    display: none;
+  }
+}
+.gallery-animata .frame {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slide 95s linear infinite;
+}
+.gallery-animata .frame.frame-0 {
+  animation-delay: 0s;
+}
+.gallery-animata .frame.frame-1 {
+  animation-delay: 5s;
+}
+.gallery-animata .frame.frame-2 {
+  animation-delay: 10s;
+}
+.gallery-animata .frame.frame-3 {
+  animation-delay: 15s;
+}
+.gallery-animata .frame.frame-4 {
+  animation-delay: 20s;
+}
+.gallery-animata .frame.frame-5 {
+  animation-delay: 25s;
+}
+.gallery-animata .frame.frame-6 {
+  animation-delay: 30s;
+}
+.gallery-animata .frame.frame-7 {
+  animation-delay: 35s;
+}
+.gallery-animata .frame.frame-8 {
+  animation-delay: 40s;
+}
+.gallery-animata .frame.frame-9 {
+  animation-delay: 45s;
+}
+.gallery-animata .frame.frame-10 {
+  animation-delay: 50s;
+}
+.gallery-animata .frame.frame-11 {
+  animation-delay: 55s;
+}
+.gallery-animata .frame.frame-12 {
+  animation-delay: 60s;
+}
+.gallery-animata .frame.frame-13 {
+  animation-delay: 65s;
+}
+.gallery-animata .frame.frame-14 {
+  animation-delay: 70s;
+}
+.gallery-animata .frame.frame-15 {
+  animation-delay: 75s;
+}
+.gallery-animata .frame.frame-16 {
+  animation-delay: 80s;
+}
+.gallery-animata .frame.frame-17 {
+  animation-delay: 85s;
+}
+.gallery-animata .frame.frame-18 {
+  animation-delay: 90s;
+}
+.gallery-animata:hover .frame {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0%, 10% {
+    opacity: 1;
+    clip-path: inset(40% 0 40% 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  90%, 100% {
+    opacity: 0;
+    clip-path: inset(40% 0 40% 0);
+  }
+}

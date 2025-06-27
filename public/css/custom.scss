@@ -1,7 +1,7 @@
 //etapa 5 customizare bootstrap
 //import functii si variabile bootstrap pt acces
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 //suprascriem tema cromatica
 $body-bg: #f3f1e7;
@@ -53,4 +53,4 @@ $h4-font-size: 1.5rem;
 $font-family-base: "Roboto", sans-serif;
 
 //import bootstrap dupa suprascieri
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";

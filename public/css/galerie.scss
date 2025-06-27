@@ -1,4 +1,6 @@
 // galerie.scss
+//definim numarul de imagini din galerie
+$count: 19;
 
 // interval (s) pentru fiecare imagine
 $interval: 5s !default;
@@ -40,7 +42,7 @@ $total: $count * $interval !default;
   }
 }
 
-// keyframes: clip-path pornește din centru și se lărgește spre margini
+// keyframes: clip-path porneste din centru si se largeste spre margini
 @keyframes slide {
   0%, 10% {
     opacity: 1;
