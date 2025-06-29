@@ -8,6 +8,7 @@
   cursor: pointer;
 }
 
+/*stilul pentru fiecare bara a hamburgerului*/
 .menu-toggle .bar {
   position: absolute;
   left: 0;
@@ -21,15 +22,18 @@
   top: 0;
 }
 
+/*a doua bara in zona de mijlox*/
 .menu-toggle .bar:nth-child(2) {
   top: calc(50% - 2px);
 }
 
+/* pozitioneaza a treia bara in partea de jos a containerului. */
 .menu-toggle .bar:nth-child(3) {
   bottom: 0;
 }
 
 /* 2 */
+/*definirea aparitiei barelor*/
 @keyframes hamburger-appear {
   0% {
     background-color: transparent;
@@ -52,7 +56,8 @@
     animation: hamburger-appear 0.5s ease-out;
   }
 }
-/* 3 */
+/* 3 variante meniu*/
+/*val intarzierii*/
 .menu-toggle .bar:nth-child(1) {
   animation: hamburger-appear 0.5s ease-out;
   animation-delay: 0ms;

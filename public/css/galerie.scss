@@ -5,7 +5,7 @@ $count: 19;
 // interval (s) pentru fiecare imagine
 $interval: 5s !default;
 
-// durata totală a ciclului
+// durata totala a ciclului
 $total: $count * $interval !default;
 
 .gallery-animata {

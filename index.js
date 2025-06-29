@@ -16,6 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // configurare globala si initializare
 // 13. se va crea o variabila globala obGlobal
+//e5 pregatire de lucru
 const obGlobal = {
     erori: null,
     eroare_default: null,
@@ -25,7 +26,8 @@ const obGlobal = {
 };
 
 //20. foldere in care proiectul genereaza fisiere
-const vect_foldere = ['temp', 'temp1', 'logs', obGlobal.folderBackup];
+//e5 folderul de backup la creare automata
+const vect_foldere = ['temp', 'temp1', 'logs', obGlobal.folderBackup];//folderele verificate la pornire
 vect_foldere.forEach(folder => {
     //construim alte cai
     const caleFolder = path.isAbsolute(folder) ? folder : path.join(__dirname, folder);
@@ -37,7 +39,7 @@ vect_foldere.forEach(folder => {
 
 //3. calea folderului care contine _dirname
 console.log("===================================================");
-console.log("Caile serverului la pornire:", `\n   -> Folder proiect: ${__dirname}`, `\n   -> Cale fișier: ${__filename}`, `\n   -> Folder de lucru: ${process.cwd()}`);
+console.log("Caile serverului la pornire:", `\n   -> Folder proiect: ${__dirname}`, `\n   -> Cale fisier: ${__filename}`, `\n   -> Folder de lucru: ${process.cwd()}`);
 console.log("===================================================");
 
 //functii helper
@@ -53,14 +55,19 @@ function initErori() {
             err.imagine = path.join(eroriData.cale_baza, err.imagine);
             return err;
         });
+
         //11b eroare_default
         obGlobal.eroare_default = eroriData.eroare_default;
         obGlobal.eroare_default.imagine = path.join(eroriData.cale_baza, obGlobal.eroare_default.imagine);
     } else {
-        console.error("Fisierul erori.json nu a fost găsit! Sistemul de erori nu va funcționa corect.");
+        console.error("Fisierul erori.json nu a fost gasit! Sistemul de erori nu va functiona corect.");
     }
 }
 initErori();
+/*
+        http://localhost:8080/orice/nume.ejs
+        http://localhost:8080/pagina-care-nu-exista
+* */
 
 //14 functie de afisare a erorilor
 function afisareEroare(res, identificator) {
@@ -74,7 +81,7 @@ function afisareEroare(res, identificator) {
         imagine: eroare.imagine
     });
 }
-
+//compilare automata Scss cu backup
 function compileazaScss(caleFisierScss) {
     if (!fs.existsSync(caleFisierScss)) {
         console.warn(`Atentie: Fisierul sursa SCSS nu a fost gasit: ${caleFisierScss}`);
@@ -90,7 +97,7 @@ function compileazaScss(caleFisierScss) {
 
         const numeFisierCss = numeFisierScss.replace(".scss", ".css");
         const caleFisierCss = path.join(obGlobal.folderCss, numeFisierCss);
-
+        //backup fisier extern css
         if (fs.existsSync(caleFisierCss)) {
             const timestamp = new Date().getTime();
             const numeBackup = `${path.basename(numeFisierCss, '.css')}_${timestamp}.css`;
@@ -115,7 +122,7 @@ app.use(express.static(path.join(__dirname, 'html')));
 
 //8. pagina index sa poata si cu index si 8080
 app.get(['/', '/index'], (req, res) => {
-    res.render('index', { // Presupune că aveți un views/index.ejs
+    res.render('index', {
         ip: req.ip,
         title: 'The Vintage Mosaic',
         images: []
@@ -136,14 +143,14 @@ app.get('/*.ejs', (req, res) => {
 app.get('/:pagina', (req, res, next) => {
     const calePagina = path.join(__dirname, 'views', `${req.params.pagina}.ejs`);
     if (fs.existsSync(calePagina)) {
-        // CERINȚA 16: Afișarea IP-ului utilizatorului.
+        //16 afisarea IP-ului utilizatorului.
         res.render(req.params.pagina, {
             ip: req.ip,
             title: req.params.pagina.charAt(0).toUpperCase() + req.params.pagina.slice(1)
         });
     } else {
-        // CERINȚA 10: În cazul în care pagina nu există se va randa o pagină specială de eroare 404.
-        // Apelăm 'next()' pentru a ajunge la handler-ul de eroare de la final.
+        // 10. in cazul in care pagina nu exista se va randa o pagina speciala de eroare 404
+        // 'next()' pentru a ajunge la handler-ul de eroare de la final
         next();
     }
 });
@@ -153,12 +160,11 @@ app.use((req, res) => {
     afisareEroare(res, 404);
 });
 
-
-// ============== COMPILARE SCSS ȘI PORNIRE SERVER ==============
+//compilare scss si pornire server monitorizare timp real
 console.log("===================================================");
 console.log("Incepe compilarea initiala a fisierelor SCSS...");
 fs.readdirSync(obGlobal.folderScss).forEach(fisier => {
-    // MODIFICARE 3: Am eliminat condiția care excludea 'galerie.scss'
+    // 3. am eliminat conditia care excludea 'galerie.scss'
     if (path.extname(fisier).toLowerCase() === ".scss") {
         compileazaScss(path.join(obGlobal.folderScss, fisier));
     }
@@ -178,3 +184,4 @@ app.listen(PORT, () => {
     console.log(`Serverul ruleaza la http://localhost:${PORT}`);
     console.log(`Pagina principala ar trebui sa fie acum 'html/index.html'`);
 });
+
