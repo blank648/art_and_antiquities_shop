@@ -91,12 +91,7 @@ table{
     --color1: #645452;
     --triangle-color: #645452;
     --triangle-hover: #645452;
-    /* etapa 3 */
-    --nav-bg: #333;
-    --nav-text: #fff;
-    --submenu-bg: #444;
-    --submenu-hover: #555;
-    --submenu-shadow: rgba(0, 0, 0, 0.5);
+
     /* etapa 4 */
     --link-color: var(--color-primary);
     --link-visited-color: var(--color-text);
@@ -539,117 +534,8 @@ msqrt{
 }
 
 /* etapa 3 */
-/* exercitiul 1 */
 
-/* seteaza containerul principal al navigatiei */
-.site-nav {
-    background-color: var(--nav-bg);
-    position: relative;
-}
-/* stilizeaza butonul hamburger care apare pe ecrane mici */
-.menu-toggle {
-    display: none;
-    color: var(--nav-text);
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-/* stilizeaza lista principala a meniului */
-.main-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.main-menu li {
-    position: relative;
-}
-/* stilizeaza link-urile (a) din meniul principal */
-.main-menu li a {
-    display: block;
-    padding: 1rem;
-    color: var(--nav-text);
-    text-decoration: none;
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;/* defineste tranzitia pentru o animatie lina la hover */
-}
-/* stilizeaza link-urile din meniul principal la trecerea mouse-ului (hover) */
-.main-menu li a:hover {
-    background-color: var(--submenu-hover);
-    /* adauga o umbra interioara pentru un efect vizual */
-    box-shadow: inset 0 0 10px var(--submenu-shadow);
-}
-/* face submeniul vizibil cand mouse-ul este deasupra elementului 'li' parinte */
-.main-menu li:hover > .submenu {
-    transform: scaleY(1);
-}
-/* stilizeaza containerul submeniului */
-.submenu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--submenu-bg);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.4s ease;
-    z-index: 999;
-    overflow: hidden;  /* ascunde conținutul cand scaleY este 0 */
-}
-/* stilizeaza link-urile din submeniu */
-.submenu li a {
-    display: block;
-    padding: 0.8rem 1.5rem;
-    position: relative;
-    transition: background-color 0.4s ease;
-}
-/* adauga sageata inaintea textului link-ului din submeniu */
-.submenu li a::before {
-    content: "▶";
-    position: absolute;
-    left: 0.5rem;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    font-size: 0.9rem;
-}
-/* sageata hover */
-.submenu li a:hover::before {
-    transform: translateX(0);
-    opacity: 1;/*face sageata opaca*/
-}
-/* meniu hamburger ecran mic */
-@media (max-width: 768px){
-    /* hamburger button */
-    .menu-toggle {
-        display: block;
-    }
-    /* meniul principal devine vertical si ascuns la inceput */
-    .main-menu {
-        display: none;
-        flex-direction: column;
-    }
-    /* face ca fiecare element 'li' sa ocupe toata latimea disponibila */
-    .main-menu li {
-        width: 100%;
-    }
-    /* ajusteaza spatiul interior pentru link-uri in meniul vertical */
-    .main-menu li a {
-        padding: 1rem;
-    }
-    /* eliminam sageata */
-    .submenu li a::before {
-        content: none;
-    }
-    /* fortam meniul pe ecran mic */
-    .main-menu.open {
-        display: flex;
-    }
-}
-/* ex 2 css printare */
+/*ex 2 printare css*/
 @media print {
     /*ascundem elementele si stilizare linkuri*/
     img, video, iframe, figure, #link-top, .menu-toggle, .taburi-iframe {
@@ -752,63 +638,79 @@ video::cue(.stil-gradient) {
     -webkit-background-clip: text;
     background-clip: text;
 }
-/*stilizare de baza linkuri*/
+
+/*etapa 4*/
+/*1. stilizare de baza linkuri*/
 a {
     color: var(--link-color);
     text-decoration: none;
     transition: color var(--transition-time), text-decoration var(--transition-time);
 }
-/* stilizarea link-urilor vizitate */
+/*stilizarea link-urilor vizitate (culoare diferita) */
 a:visited {
-    color: var(--link-visited-color);
+    color: #af4261;
 }
 
-/*2 Stilizarea link-urilor externe
- selecteaza toate link-urile <a> al caror atribut 'href' incepe cu "http"
- adauga o iconita inainte de text folosind ::before.
+/*2 Stilizarea link-urilor externe cu iconita
 */
 a[href^="http"]::before {
     font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* necesat pentru iconitele solide din Font Awesome 5+ */
-    content: "\f35d"; /* codul Unicode pentru iconita "external-link-alt" */
-
-    margin-right: 0.5em; /* adauga spatiu intre iconita si textul link-ului */
-    font-size: 1.2em; /* face iconita putin mai mare decat textul */
+    font-weight: 900;
+    content: "\f35d";
+    margin-right: 0.5em;
+    font-size: 1.5em;
     text-decoration: none;
-    display: inline-block; /* permite aplicarea corecta a spatierii */
-    vertical-align: middle; /* aliniaza iconita mai frumos cu textul */
+    display: inline-block;
+    vertical-align: middle;
 }
 
-/*3 efect de "wipe" la hover pentru link-urile din pagina*/
-.link-wipe {
-    position: relative; /* necesar pentru pozitionarea corecta a pseudo-elementului */
-    text-decoration: none; /* eliminam sublinierea default pentru a o inlocui cu a noastra */
-    padding-bottom: 3px; /* spatiu sub text pentru linia animata */
+a:hover {
+    color: var(--link-hover-color);
 }
-/*pseudoelementul care formeaza o linie automata*/
-.link-wipe::after {
+
+/*4. hover pe link-uri interne ("pata de culoare") */
+.link-pata {
+    position: relative;
+    z-index: 1; /* asigura ca textul sta deasupra petei de culoare */
+    transition: color 0.4s ease;
+    text-decoration: none !important; /* suprascriem orice subliniere */
+}
+
+.link-pata::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    height: 2px; /* grosimea liniei */
-    background: var(--color-highlight, #7e6d3e); /* culoarea liniei */
+    height: 120%; /*mai inalt decat textul */
 
-    /* starea initiala: linia este "ascunsă" (scalată la 0) */
-    transform: scaleX(0);
-    transform-origin: left; /* animatia va porni din stanga */
+    /* pata de culoare este un gradient radial, initial invizibil (dimensiune 0) */
+    background-image: radial-gradient(
+            circle,
+            var(--c1, #645452) 40%, /* culoarea petei */
+            transparent 80% /* transparent spre margini */
+    );
 
-    /* tranzitia pentru animatia de aparitie */
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background-size: 0; /* stare initiala: invizibil */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1; /* pune pata de culoare in spatele textului */
+    border-radius: 50%; /* O face rotunda */
+    opacity: 0.4; /* O facem semitransparenta */
+
+    /* tranzitia pentru animatia de crestere */
+    transition: background-size 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-/* starea la hover: linia se extinde pe toata lațimea */
-.link-wipe:hover::after {
-    transform: scaleX(1);
+/* la hover, pata de culoare creste si devine mai opaca */
+.link-pata:hover::before {
+    background-size: 200%; /* O valoare mare pentru a acoperi tot textul */
+    opacity: 0.7;
 }
 
-/*4 stilizarea link-urilor active in momentul click-ului*/
+/*5. stilizarea link-urilor active in momentul click-ului*/
 a:active {
     outline: 2px dashed var(--color-border, #d4af37);
     outline-offset: 3px; /* spatiu intre text si bordura */

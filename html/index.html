@@ -18,20 +18,21 @@
     <link rel='preconnect' href="https://fonts.googleapis.com">
     <link rel='preconnect' href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../public/css/general2.css">
+    <!--<link rel="stylesheet" href="../public/css/general.scss">
+    <link rel="stylesheet" href="../public/css/nav.css">-->
+    <link rel="stylesheet" href="../public/css/nav-style.css">
     <link rel="stylesheet" href="../public/css/general.scss">
-    <link rel="stylesheet" href="../public/css/nav.css">
 
 </head>
 
 <body>
 <div id="top"></div>
 <header>
-    <link rel="stylesheet" href="../public/css/general.scss">
-    <i class="fa-solid fa-star"></i>
+
     <h2>The Vintage Mosaic</h2>
-    <i class="fa-solid fa-cog fa-spin"></i>
     <nav class="site-nav">
         <div class="menu-toggle">
             <span class="bar"></span>
@@ -39,73 +40,65 @@
             <span class="bar"></span>
         </div>
         <ul class="main-menu">
-            <li class="home-link">
-                <a href="index.html">Acasa</a>
-            </li>
-            <li class = "gallery-link">
-                <a href = "#">Galerie</a>
-                <ul class="submenu">
-                    <li>
-                        <a href="static_galery.html">Galerie statica</a>
-                    </li>
-                </ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home home-icon"></i>
+                    <span>Acasa</span>
+                </a>
             </li>
             <li>
                 <a href="#zona2">Produse</a>
             </li>
             <li>
-                <a href="#zona3">Categorii</a>
+                <a href="#">Categorii</a>
                 <ul class="submenu">
-                    <li>
-                        <a href="#mobilier-de-epoca">Bijuterii vintage</a>
-                    </li>
-                    <li>
-                        <a href = "#arta-plastica">Arta Plastica</a>
-                    </li>
-                    <li>
-                        <a href = "#bijuterii-vintage">Bijuterii Vintage</a>
-                    </li>
-                    <li>
-                        <a href = "#ceasuri-vintage">Ceasuri Vintage</a>
-                    </li>
-                    <li>
-                        <a href = "#portelanuri-si-ceramica">Portelanuri si Ceramica</a>
-                    </li>
+                    <li><a href="#bijuterii-vintage">Bijuterii Vintage</a></li>
+                    <li><a href="#arta-plastica">Arta Plastica</a></li>
+                    <li><a href="#ceasuri-vintage">Ceasuri Vintage</a></li>
+                    <li><a href="#portelanuri-si-ceramica">Portelanuri si Ceramica</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Parteneri</a>
+                <a href="#">Galerie</a>
                 <ul class="submenu">
-                    <li>
-                        <a href="#zona4">Parteneri</a>
-                    </li>
-                    <li>
-                        <a href="#implicarea culturala">Evenimente</a>
-                    </li>
+                    <li><a href="static_galery.html">Galerie Statica</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="#zona5">Profil</a>
             </li>
             <li>
                 <a href="#zona6">Contact</a>
             </li>
-            <li>
-                <a href="#zona7">Faq</a>
-            </li>
-            <li>
-                <a href="#zona8">Oferte</a>
-            </li>
         </ul>
     </nav>
-    <div class="container-iframe">
-        <div class="taburi-iframe">
-            <a href="https://www.youtube.com/embed/UPk56BR1Cmk" target="ifr-video">Importanta artei</a>
-        </div>
-        <iframe name="ifr-video" width="100" height="315" src="https://www.youtube.com/embed/UPk56BR1Cmk"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen style="border:0;"></iframe>
+
+    <div class="video-container" style="text-align: center; margin: 2rem 0;">
+
+        <h2>Importanta artei</h2>
+
+        <video
+                poster="/resurse/imagini/poster.jpg"
+                controls
+                preload="auto"
+                style="max-width: 100%; height: auto;">
+
+            <source src="/resurse/imagini/Why%20art%20is%20important%20｜%20Katerina%20Gregos%20｜%20TEDxGhent.mp4" type="video/mp4">
+            <track
+                    src="/resurse/vtt/subtitrari-ro.vtt"
+                    kind="subtitles"
+                    srclang="ro"
+                    label="Romana"
+                    default>
+
+            <track
+                    src="/resurse/vtt/subtitrari-en.vtt"
+                    kind="subtitles"
+                    srclang="en"
+                    label="English">
+
+        </video>
+
     </div>
+
 </header>
 
 <main>
@@ -372,15 +365,15 @@
 
 </main>
 <footer>
-    <a href = "#zona1">Acasa</a>
-    <a href = "#zona2">Produse</a>
-    <a href = "#zona3">Categorii</a>
-    <a href = "#zona4">Parteneri</a>
-    <a href = "#zona5">Profil</a>
-    <a href = "#zona6">Contact</a>
-    <a href = "#zona7">Intrebari Frecvente</a>
-    <a href = "#zona8">Oferte</a>
-    <a href = "#zona1" download>Download Index</a>
+    <a href = "#zona1" class="link-pata">Acasa</a>
+    <a href = "#zona2" class="link-pata">Produse</a>
+    <a href = "#zona3" class="link-pata">Categorii</a>
+    <a href = "#zona4" class="link-pata">Parteneri</a>
+    <a href = "#zona5" class="link-pata">Profil</a>
+    <a href = "#zona6" class="link-pata">Contact</a>
+    <a href = "#zona7" class="link-pata">Intrebari Frecvente</a>
+    <a href = "#zona8" class="link-pata">Oferte</a>
+    <a href = "#zona1" class="link-pata" download>Download Index</a>
 
     <!-- adresa in footer -->
     <address>
@@ -434,8 +427,30 @@
     document.addEventListener("DOMContentLoaded", function() {
         const menuToggle = document.querySelector(".menu-toggle");
         const mainMenu = document.querySelector(".main-menu");
+
+        // Deschide/inchide meniul principal (hamburger)
         menuToggle.addEventListener("click", function() {
+            this.classList.toggle("active");
             mainMenu.classList.toggle("open");
+        });
+
+        // --- NOU: Logica pentru submeniuri dropdown pe mobil ---
+        const menuItemsWithSubmenu = document.querySelectorAll(".main-menu > li");
+
+        menuItemsWithSubmenu.forEach(item => {
+            // Verificam daca elementul are un submeniu
+            if (item.querySelector(".submenu")) {
+                item.addEventListener("click", function(event) {
+                    // Prevenim navigarea la link-ul '#'
+                    event.preventDefault();
+
+                    // Verificam daca suntem pe un ecran mic (unde meniul hamburger este vizibil)
+                    if (window.innerWidth <= 768) {
+                        // Adaugam/stergem clasa 'submenu-open' pe elementul 'li'
+                        this.classList.toggle("submenu-open");
+                    }
+                });
+            }
         });
     });
 </script>
